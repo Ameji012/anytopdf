@@ -27,9 +27,13 @@ gem 'prawn'
 
 gem 'imgkit'
 
+gem 'wkhtmltoimage-binary'
+
 gem 'acts_as_flying_saucer'
 
 gem 'nailgun'
+
+require 'open-uri'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
