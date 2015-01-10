@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @pdffile.url %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @pdffile.filename %>
+</p>
+
+<%= link_to 'Edit', edit_pdffile_path(@pdffile) %> |
+<%= link_to 'Back', pdffiles_path %>

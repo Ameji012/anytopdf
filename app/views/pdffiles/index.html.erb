@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pdffiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Filename</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pdffiles.each do |pdffile| %>
+      <tr>
+        <td><%= pdffile.url %></td>
+        <td><%= pdffile.filename %></td>
+        <td><%= link_to 'Show', pdffile %></td>
+        <td><%= link_to 'Edit', edit_pdffile_path(pdffile) %></td>
+        <td><%= link_to 'Destroy', pdffile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pdffile', new_pdffile_path %>
