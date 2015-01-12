@@ -10,6 +10,15 @@ class PdffilesController < ApplicationController
   # GET /pdffiles/1
   # GET /pdffiles/1.json
   def show
+    @pdffile = Pdffile.find(params[:id])
+    kit       = PDFKit.new("http://" + @pdffile.url) # pass any options that the
+    pdf_file  = kit.to_file(Rails.root + "app/assets/imgkit_temp/" + "#{@pdffile.filename}.pdf")    # renderer needs here (same
+                                                                                            # options as `render`).
+    send_file( pdf_file )
+    # and if you still want to send it to the browser...
+    # respond_to do |format|
+    #   format.pdf { render :file => pdf_file.path }
+    # end
   end
 
   # GET /pdffiles/new
