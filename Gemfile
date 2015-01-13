@@ -26,9 +26,6 @@ gem 'prawn'
 
 gem 'imgkit'
 
-
-gem 'acts_as_flying_saucer'
-
 gem 'nailgun'
 
 require 'open-uri'
@@ -37,7 +34,6 @@ gem 'pdfkit'
 
 gem 'httparty'
 
-gem 'wkhtmltopdf-heroku', '~> 1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
