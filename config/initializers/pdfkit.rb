@@ -7,5 +7,5 @@ PDFKit.configure do |config|
   else
     raise "Unsupported. Must be running linux or intel-based Mac OS."
   end
-  config.wkhtmltopdf = Rails.root.join('vendor', 'bin', wkhtmltopdf_executable).to_s
+  config.wkhtmltopdf = Rails.root.join('vendor', wkhtmltopdf_executable).to_s
 end
